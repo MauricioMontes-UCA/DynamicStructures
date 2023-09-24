@@ -1,13 +1,13 @@
 #include "CircularQueueStructures.hpp"
 
 
-void CreateQueue(Node *temp){
+void CreateQueue(CircularQueue *temp){
     //Inicializa head y tail con -1
     temp->head = -1;
     temp->tail = -1;
 }
 
-bool IsEmpty(Node *temp){
+bool IsEmpty(CircularQueue *temp){
     //Verifica si el nodo está vacío
     if (temp->head == -1){
         return true; //Indeed, it is empty
@@ -17,7 +17,7 @@ bool IsEmpty(Node *temp){
     }
 }
 
-int CountElements(Node *temp){
+int CountElements(CircularQueue *temp){
     if(IsEmpty(temp)){
         return 0;
     }
@@ -31,7 +31,7 @@ int CountElements(Node *temp){
     }
 }
 
-bool IsFull(Node *temp){
+bool IsFull(CircularQueue *temp){
     if(CountElements(temp) == size){
         return true;
     }
@@ -40,7 +40,7 @@ bool IsFull(Node *temp){
     }
 }
 
-void Push(Node *temp, Information data){
+void Push(CircularQueue *temp, Information data){
     if (!IsFull(temp)){
         if (IsEmpty(temp)){
             temp->head = 0;
@@ -61,7 +61,7 @@ void Push(Node *temp, Information data){
     }
 }
 
-void Pop(Node *temp){
+void Pop(CircularQueue *temp){
     if (!IsEmpty(temp)){
         if (CountElements(temp) == 1){
             CreateQueue(temp);

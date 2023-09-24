@@ -1,25 +1,25 @@
 #include "CircularQueueMethods.hpp"
 
 int main(){
-    struct Node newNode;
+    struct CircularQueue intChar;
 
-    CreateQueue(&newNode);
+    CreateQueue(&intChar);
 
-    Push(&newNode, {5, 'a'});
-    Push(&newNode, {93, 'i'});
-    Push(&newNode, {29, 'o'});
+    Push(&intChar, {5, 'a'});
+    Push(&intChar, {93, 'i'});
+    Push(&intChar, {29, 'o'});
 
-    Pop(&newNode);
+    Pop(&intChar);
     
-    Push(&newNode, {80, 'u'});
+    Push(&intChar, {80, 'u'});
 
-    cout << newNode.info[newNode.head].id << endl;
-    cout << newNode.info[newNode.head].character << endl;
+    cout << intChar.info[intChar.head].id << endl;
+    cout << intChar.info[intChar.head].character << endl;
 
     cout << "---------------------------------" << endl;
 
-    cout << newNode.info[newNode.tail].id << endl;
-    cout << newNode.info[newNode.tail].character << endl;
+    cout << intChar.info[intChar.tail].id << endl;
+    cout << intChar.info[intChar.tail].character << endl;
 
     return 0;
 }
