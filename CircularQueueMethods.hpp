@@ -40,7 +40,7 @@ bool IsFull(CircularQueue *temp){
     }
 }
 
-void Push(CircularQueue *temp, Information data){
+void Enqueue(CircularQueue *temp, Information data){
     if (!IsFull(temp)){
         if (IsEmpty(temp)){
             temp->head = 0;
@@ -61,7 +61,7 @@ void Push(CircularQueue *temp, Information data){
     }
 }
 
-void Pop(CircularQueue *temp){
+void Dequeue(CircularQueue *temp){
     if (!IsEmpty(temp)){
         if (CountElements(temp) == 1){
             CreateQueue(temp);
