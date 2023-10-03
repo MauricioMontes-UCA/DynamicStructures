@@ -1,7 +1,7 @@
 #include "LinkedListStructures.hpp"
 
 //Insertion functions
-void add(int data){
+void Add(int data){
     //función para ingresar datos al principio de la lista enlazada
     Node *newNode = new Node;
 
@@ -17,7 +17,7 @@ void add(int data){
     }
 }
 
-void append(int data){
+void Append(int data){
     //función para ingresar datos al final de la lista enlazada
     Node *newNode = new Node;
     Node *temp = list;
@@ -36,7 +36,7 @@ void append(int data){
     }
 }
 
-void index(int data, int position){
+void Index(int data, int position){
     //función para ingresar datos en medio de la lista dada una posición
     Node *newNode = new Node;
     Node *temp = list; //list es el principio de la lista
@@ -59,7 +59,7 @@ void index(int data, int position){
                           //desplazando la ubicación del nodo al que apunta temp
 }
 
-void deleteHead(){
+void DeleteHead(){
     Node *temp = list; //dos punteros apuntan a la dirección del primer elemento
 
     if (list != nullptr){ //si la lista no está vacía...
@@ -71,7 +71,7 @@ void deleteHead(){
     }
 }
 
-void deleteTail(){ //se requieren de dos punteros auxiliares
+void DeleteTail(){ //se requieren de dos punteros auxiliares
     Node *temp = list;
     Node *aux;
 
