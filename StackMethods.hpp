@@ -1,7 +1,7 @@
 #include "StackStructure.hpp"
 
 //Métodos principales: Push() y Pop()
-void Push(int data){
+void Push(Node *stack, int data){
     struct Node *temp = new Node;
 
     temp->element = data;
@@ -10,7 +10,7 @@ void Push(int data){
     stack = temp;
 }
 
-void Pop(){
+void Pop(Node *stack){
     if (stack != nullptr){
         struct Node *temp = stack;
         stack = temp->next;
@@ -18,7 +18,7 @@ void Pop(){
     }
 }
 
-void Print(){
+void Print(Node *stack){
     struct Node* temp = stack;
 
     while (temp != nullptr){
@@ -27,12 +27,12 @@ void Print(){
     }
 }
 
-bool Empty(){
+bool Empty(Node *stack){
     return stack == nullptr;
 }
 
-int LastElement(){
-    if (Empty()){
+int LastElement(Node *stack){
+    if (Empty(stack)){
         return -1;
     }
     else{

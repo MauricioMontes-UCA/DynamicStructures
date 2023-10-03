@@ -23,9 +23,9 @@ void append(int data){
     Node *temp = list;
 
     newNode->element = data;
+    newNode->next = nullptr;
 
     if (list == nullptr){
-        newNode->next = nullptr;
         list = newNode;
     }
     else{
